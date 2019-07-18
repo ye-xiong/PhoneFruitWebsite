@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+    <title>商品详情</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+	<link rel="stylesheet" type="text/css" href="../css/project.css?t=1">
+	<!-- Link Swiper's CSS -->
+	<link rel="stylesheet" href="../dist/css/swiper.min.css">
+</head>
+<body>
+<!-- Swiper -->
+  <div class="swiper-container banner" style="height: 210px;">
+     <div class="swiper-wrapper">
+          <!--<div class="swiper-slide">
+           	<video  width="100%" height="100%" controls="controls">
+				<source src="../img/video.mp4" type="video/mp4">
+			</video>
+          </div> -->
+          <div class="swiper-slide"><img src="../img/tu1.jpg" width="100%" style="height: 160%;margin-top: -30px;"></div>
+          <div class="swiper-slide"><img src="../img/tu4.jpg" width="100%" style="height: 160%;margin-top: -30px;"></div>
+          <div class="swiper-slide"><img src="../img/tu2.jpg" width="100%" style="height: 160%;margin-top: -30px;"></div>
+          <div class="swiper-slide"><img src="../img/tu5.jpg" width="100%" style="height: 160%;margin-top: -30px;"></div>
+     </div>
+    <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+  </div>
+  
+<div class="shangp_content">
+	<div class="sptop">
+		<p>
+			￥<span style="color:#e50000;">25.5</span>/份&nbsp;&nbsp;<del>￥35.5</del>
+		</p>
+	</div>
+  	<div class="spheader">
+  		<div>
+  			<h4>周至猕猴桃（精选有机）</h4>
+  			<p>天然的猕猴桃，自然的味道。青春滋味，活力畅享</p>
+  			<div>
+  				<i>一小时送达</i>
+  				<i class="iconfont">&#xe8b2;</i>
+  				现在下单立即享受一小时送货上门服务
+  			</div>
+  		</div>
+  		<p><i class="iconfont">&#xe8bf;</i><br>分享</p>
+  	</div>
+  	<div class="spcontent">
+  		<p>鲜果详情</p>
+  		<img src="../img/xiangqiang.jpg" />
+  	</div>
+</div>
+<div class="shangp_footer">
+	<div>
+		<i class="iconfont shouc">&#xe912;</i>
+		<p>收藏</p>
+	</div>
+  	<div>
+		<i class="iconfont">&#xe8b3;</i>
+		<p>购物车</p>
+	</div>
+	<div class="chujiabtn">
+		加入购物车
+	</div>
+</div>
+<div class="qr_btn">
+	<div>
+		<div class="spheader">
+      <div>
+        <h4>周至猕猴桃（精选有机）</h4>
+        <p>天然的猕猴桃，自然的味道。青春滋味，活力畅享</p>
+        <div>
+          <i>一小时送达</i>
+          <i class="iconfont">&#xe8b2;</i>
+          现在下单立即享受一小时送货上门服务
+        </div>
+      </div>
+      <!-- <p><i class="iconfont">&#xe8bf;</i><br>分享</p> -->
+    </div>
+  		<div class="guige">规格：500g/一份</div>
+  		<div>
+  			<div class="addactive shuliang">数量：<i class="iconfont jian">&#xeab9;</i><span>1</span><i class="iconfont jia">&#xeaba;</i></div>
+  		</div>
+  		<button>加入购物车</button>
+	</div>
+</div>
+  
+  
+  
+</body> 
+ <script src="../dist/js/swiper.min.js"></script>
+  <script type="text/javascript" src="../js/jquery-1.8.2.min.js"></script>
+
+  <!-- Initialize Swiper -->
+  <script type="text/javascript">
+    var mySwiper1  = new Swiper(".banner.swiper-container",{
+
+        autoplay:true,//设置自动循环播放
+        pagination: '.swiper-pagination',
+        loop:true
+
+})
+    $(function(){
+    	var str = 1
+    	$(".shouc").click(function(){
+    		if(str == 1){
+    			$(this).html("&#xe911;").css("color","green");
+    			str=-1;
+    		}
+    		
+    		})
+    	$(".chujiabtn").click(function(){
+			var height =$(window).height()+"px";
+			$(".qr_btn").show().css("height",height).css("top","0px");
+			$("body").css("overflow","hidden");
+			$(".qr_btn button").click(function(){
+				$(".qr_btn").hide();
+				$("body").css("overflow","auto");
+			})
+			
+		})
+    	var sum = 1;
+    	$(".jia").click(function(){
+    		sum=sum+1;
+    		$(".shuliang span").html(sum);
+    	})
+    	$(".jian").click(function(){
+    		if(sum>1){
+    			sum=sum-1;
+    			$(".shuliang span").html(sum);
+    		}else{
+    			alert("不能再减了！")
+    		}
+    		
+    	})
+    		
+    })
+</script>
+</html>

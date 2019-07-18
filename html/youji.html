@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>附近鲜果</title>
+		<link rel="stylesheet" href="../../css/project.css" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+		<style type="text/css">
+			.phoneDetail_list{
+				width: 100%;
+				padding: 10px;
+				box-sizing: border-box;
+				border-radius: 7px;
+				margin-top: 10px;
+				-moz-box-shadow:2px 2px 5px 2px rgba(136,136,136,0.1); /* 老的 Firefox */
+				box-shadow: 2px 2px 5px 2px rgba(136,136,136,0.1);
+			}
+			.phoneDetail_list>div{
+				display: flex;
+				color: #727171;
+				/*width: 70%;*/
+				text-align: left;
+				
+			}
+			.phoneDetail_list>div>img{
+				width: 100px;
+				height: 100px;
+				margin-right: 15px;
+			}
+			.phoneDetail_list>div>div{
+				/*margin-left: 20px;*/
+				width: 235px;
+			}
+			.phoneDetail_list>div>div>h3{
+				font-size: 16px;
+				margin-bottom: 7px;
+			}
+			.phoneDetail_list>div>div>p{
+				margin-bottom: 7px;
+			}
+			.phoneDetail_list>div>div>button{
+				float: right;
+				width:90px;
+				border: 0;
+				padding: 2px;
+				padding-left: 5px;
+				padding-right: 5px;
+				background-color: #82b35c;
+				color: #FFFFFF;
+				border-radius: 5px;
+				-moz-box-shadow:2px 2px 5px 2px rgba(136,136,136,0.1); /* 老的 Firefox */
+				box-shadow: 2px 2px 5px 2px rgba(136,136,136,0.1);
+				font-weight: bold;
+				letter-spacing: 1px;
+			}
+			.phoneDetail_list>div>div>button>i{
+				font-weight: 100;
+				margin-right: 5px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="phoneDetail_list">
+			<div>
+				<img src="../../img/teb5.jpg" />
+				<div>
+					<h3>鲜果达无籽葡萄</h3>
+					<p>最优质的阳光，最肥沃的土地，滋养出最甜的葡萄</p>
+					<button><i class="iconfont">&#xe68b;</i>立即抢购</button>
+				</div>
+			</div>
+		</div>
+		<div class="phoneDetail_list">
+			<div>
+				<img src="../../img/yx_111.jpg" />
+				<div>
+					<h3>鲜果达红富士</h3>
+					<p>山东绿色有机苹果基地，产出的水晶红富士，个大皮薄，甜度适宜</p>
+					<button><i class="iconfont">&#xe68b;</i>立即抢购</button>
+				</div>
+			</div>
+		</div>
+		<div class="phoneDetail_list">
+			<div>
+				<img src="../../img/xiangjiao1.jpg" />
+				<div>
+					<h3>鲜果达海南香蕉</h3>
+					<p>海南绿色香蕉产业基地，用最健康的方法做最健康的香蕉</p>
+					<button><i class="iconfont">&#xe68b;</i>立即抢购</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="../../js/jquery-1.8.2.min.js" ></script>
+	<script type="text/javascript">
+		$(".phoneDetail_list>div>div>button").click(function(){
+			window.location.href="xiangqing.html"
+		})
+	</script>
+</html>
